@@ -2,11 +2,13 @@ document.getElementById('bg-change').addEventListener('click', function () {
   let randomColor = '#' + Math.floor(Math.random()*750).toString(16);
         document.body.style.backgroundColor = randomColor;
 })
-document.getElementById('discover').addEventListener('click', function () {
+document.getElementById('discover').addEventListener('click', function (event) {
+  event.preventDefault();
   window.location.href="question.html"
 })
 function cardAccess(btnId, cardTitle) {
-  document.getElementById(btnId).addEventListener("click", function () {
+  document.getElementById(btnId).addEventListener("click", function (event) {
+    event.preventDefault()
     alert("Board Update Successfully");
     const taskAssign = document.getElementById("task-assign").innerText;
     const convertedTask = parseInt(taskAssign) || 0;
@@ -25,13 +27,14 @@ function cardAccess(btnId, cardTitle) {
     p.classList.add("bg-gray-100")
     p.classList.add("p-2")
     p.classList.add("m-2")
-    p.innerText = ` You have completed the task ${title} ${hours}:${minute}:${second} ${amPm}
+    p.innerText = ` You have completed the task ${title} ${getFullTime()}
       `;
     
     history.appendChild(p);
   });
 }
-document.getElementById("history-btn").addEventListener("click", function () {
+document.getElementById("history-btn").addEventListener("click", function (event) {
+  event.preventDefault();
   document.getElementById("history").innerText = "";
 });
 
