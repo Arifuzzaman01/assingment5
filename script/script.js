@@ -25,8 +25,7 @@ function cardAccess(btnId, cardTitle) {
     p.classList.add("bg-gray-100")
     p.classList.add("p-2")
     p.classList.add("m-2")
-    p.innerText = `
-      You have completed the task ${title} ${hours}:${minute}:${second} ${amPm}
+    p.innerText = ` You have completed the task ${title} ${hours}:${minute}:${second} ${amPm}
       `;
     
     history.appendChild(p);
