@@ -75,10 +75,14 @@ function cardAccess(btnId, cardTitle) {
     p.classList.add("bg-gray-100");
     p.classList.add("p-2");
     p.classList.add("m-2");
-    p.innerText = ` You have completed the task ${title} ${getFullTime()}
+    p.innerText = ` You have completed the task ${title} at ${getFullTime()}
       `;
 
     history.appendChild(p);
+    if (convertedTask === 1) {
+      alert('Congrats !!! You hav completed all the current task.')
+    }
+
   });
 }
 document
