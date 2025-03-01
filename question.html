@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev/Question</title>
+    <!-- Tailwind + daisy UI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#eef0fa]">
+    <header class="py-5 mx-24">
+      <nav class="flex justify-between items-center bg-white rounded-md p-3">
+        <div class="flex items-center gap-5">
+          <img class="" src="./assets/logo.png" alt="" />
+          <h1 class="text-2xl">Dev <span class="font-bold">Board</span></h1>
+        </div>
+        <div>
+          <button
+            id="back-to-desk"
+            class="bg-blue-600 px-6 py-4 rounded-md text-white text-xl"
+          >
+            Back to Desk
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="mx-24">
+      <div class="p-5 bg-white rounded-md">
+        <h1 class="text-xl font-bold">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </h1>
+        <p class="font-bold">- Five ways to selected an element</p>
+        <ol class="flex gap-5">
+          <li>1. querySelector</li>
+          <li>2. querySelectorAll</li>
+          <li>3. className</li>
+          <li>4. Id</li>
+          <li>5. TagName</li>
+        </ol>
+      </div>
+      <div class="p-5 my-5 bg-white rounded-md">
+        <h1 class="text-xl font-bold">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </h1>
+        <p>* InnerText: With the InnerText can get the value of a tag</p>
+        <p class="py-3">
+          * InnerHtml: With the InnerText can get the html collection of a tag
+        </p>
+        <p>
+          * Text Content: TextContent is a javascript property which return or
+          set a pure text in html element
+        </p>
+      </div>
+      <div class="p-5 my-5 bg-white rounded-md">
+        <h1 class="text-xl font-bold">
+          Question-3: What is event delegation in the DOM?
+        </h1>
+        <p>* keeping element an addEventListener for more than on element</p>
+      </div>
+      <div class="p-5 my-5 bg-white rounded-md">
+        <h1 class="text-xl font-bold">
+            Question-5: How do you create, add, and remove elements using JavaScript?
+        </h1>
+        <p>*Create Element: div.createElement('div')</p>
+        <p>*Add Element: parentDiv.appendChild('div')</p>
+        <p>*remove Element: div.remove(); </p>
+      </div>
+    </main>
+    <script>
+      document
+        .getElementById("back-to-desk")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
